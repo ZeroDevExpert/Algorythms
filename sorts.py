@@ -30,8 +30,24 @@ def get_rand_mass(size):
 		res.append(random.randint(0, 100))
 	return res
 
+
+def choiceSort(alist):
+	for end_pointer in range(len(alist)-1, 0, -1):
+		loc_max = 0
+		for pos in range(1, end_pointer+1):
+			if alist[pos] > alist[loc_max]:
+				loc_max = pos
+		alist[end_pointer], alist[loc_max] = alist[loc_max], alist[end_pointer]
+	return alist
+
+
+def insertSort(alist):
+	return alist
+
+
 if __name__ == "__main__":
-	rand_mass = get_rand_mass(10)
+	rand_mass = get_rand_mass(5)
 	print(rand_mass)
-	print('bubble sort: ', bubbleSort(rand_mass))
-	print('bubble sort2: ', bubbleSort2(rand_mass))
+	# print('bubble sort: ', bubbleSort(rand_mass))
+	# print('bubble sort2: ', bubbleSort2(rand_mass))
+	# print('choiceSort', choiceSort(rand_mass))
