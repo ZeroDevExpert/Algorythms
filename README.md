@@ -1,2 +1,1 @@
-# pythonAlgorythms
-examples of algorithms on python
+# python core
